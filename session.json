@@ -1,0 +1,13 @@
+[{"code": "1", "startTime": "08:10", "endTime": "09:00"},
+{"code": "2", "startTime": "09:10", "endTime": "10:00"},
+{"code": "3", "startTime": "10:10", "endTime": "11:00"},
+{"code": "4", "startTime": "11:10", "endTime": "12:00"},
+{"code": "5", "startTime": "13:10", "endTime": "14:00"},
+{"code": "6", "startTime": "14:10", "endTime": "15:00"},
+{"code": "7", "startTime": "15:10", "endTime": "16:00"},
+{"code": "8", "startTime": "16:10", "endTime": "17:00"},
+{"code": "9", "startTime": "17:10", "endTime": "18:00"},
+{"code": "A", "startTime": "18:30", "endTime": "19:20"},
+{"code": "B", "startTime": "19:25", "endTime": "20:15"},
+{"code": "C", "startTime": "20:25", "endTime": "21:15"},
+{"code": "D", "startTime": "21:20", "endTime": "22:10"}]
