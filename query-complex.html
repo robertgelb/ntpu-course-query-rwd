@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>臺北大學課程查詢</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas/4.2.3/tocas.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas/4.2.3/tocas.min.js"></script>
+
+
+  <link rel="shortcut icon" href="https://robertgelb.github.io/ntpusu-regulation-typesetting/favicon.ico" />
+  
+ 	
+</head>
+<body class="is-secondary">
+
+<div class="ts-container is-narrow">
+<div class="ts-wrap is-vertical">
+	
+	<div class="ts-space is-small"></div>
+	
+	<div class="ts-content is-tertiary is-vertically-very-padded">
+		<div class="ts-center">
+			<div class="ts-header is-large">臺北大學課程查詢</div>
+			<div class="ts-text is-secondary">響應式設計版本</div>
+		</div>
+	</div>
+
+	<div class="ts-breadcrumb is-divided is-secondary">
+		<a class="item" href="/">
+			<span class="ts-icon is-house-icon"></span>
+		</a>
+		<a class="item is-active">
+			課程查詢
+		</a>
+	</div>
+	
+	<div class="ts-container is-very-narrow">
+		<div class="ts-notice is-negative">
+			<div class="title">警語</div>
+			<div class="content">這不是國立臺北大學製作的課程查詢系統，正確資訊應該以<a href="https://sea.cc.ntpu.edu.tw/pls/dev_stud/course_query_all.CHI_MAIN">校版課程查詢系統</a>中課務組、進修教育組提供的正式資料為準。</div>
+		</div>
+	
+	</div>
+	
+	<div class="content">
+		<form name="bill" action="search.php" method="GET" id="chaxun">
+		<div class="ts-wrap is-vertical">
+			<div class="ts-control mobile:is-stacked">
+				<div class="label">應修系級</div>
+				<div class="content">
+					<div class="ts-wrap">
+						<div class="ts-select">
+							<select name="qCollege" id="listCollege">
+							</select>
+						</div>
+						<div class="ts-select">
+							<select name="qdept" id="listDeptsByCollege">
+								<option value="">全部</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="ts-control mobile:is-stacked">
+				<div class="label">學年/學期</div>
+				<div class="content">
+					<!--<div class="ts-wrap">-->
+						<div class="ts-select">
+							<select name="qYear">
+								<option value="">全部</option>
+								<option value="113" selected>113</option>
+								<option value="112">112</option>
+								<option value="111">111</option>
+								<option value="110">110</option>
+								<option value="109">109</option>
+								<option value="108">108</option>
+								<option value="107">107</option>
+								<option value="106">106</option>
+								<option value="105">105</option>
+								<option value="104">104</option>
+								<option value="103">103</option>
+								<option value="102">102</option>
+								<option value="101">101</option>
+								<option value="100">100</option>
+								<option value="099">099</option>
+								<option value="098">098</option>
+								<option value="097">097</option>
+								<option value="096">096</option>
+								<option value="095">095</option>
+								<option value="094">094</option>
+								<option value="093">093</option>
+								<option value="092">092</option>
+								<option value="091">091</option>
+								<option value="090">090</option>
+							</select>
+						</div>
+						<!--<div class="ts-text has-padded">
+							/
+						</div>-->
+						<div class="ts-select">
+							<select name="qTerm" >
+								<option value="">全部</option>
+								<option value="1" selected>1</option>
+								<option value="2">2</option>
+							</select>
+						</div>
+					<!--</div>-->
+				</div>
+			</div>
+			
+			
+			
+			<div class="ts-control mobile:is-stacked">
+				<div class="label">課程流水碼</div>
+				<div class="content">
+					<div class="ts-input">
+						<input type="text" name="courseno" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="ts-control mobile:is-stacked">
+				<div class="label">課程名稱</div>
+				<div class="content">
+					<div class="ts-input">
+						<input type="text" name="cour" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="ts-control mobile:is-stacked">
+				<div class="label">教師姓名</div>
+				<div class="content">
+					<div class="ts-input">
+						<input type="text" name="teach" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="ts-divider"></div>
+			
+			<div class="ts-control mobile:is-stacked">
+				<div class="label">上課時間</div>
+				<div class="content">
+					<div class="ts-wrap">
+						<div class="ts-select">
+							<select name="week">
+								<option value="" selected>=不限=</option>
+								<option value="1">週一</option>
+								<option value="2">週二</option>
+								<option value="3">週三</option>
+								<option value="4">週四</option>
+								<option value="5">週五</option>
+								<option value="6">週六</option>
+								<option value="7">週日</option>
+							</select>
+						</div>
+						<div class="ts-select">
+						 <select name="seq1">
+						 <option value="A" selected>=不限=</option>
+						 <option value="A">1  8:10~9:00</option>
+						 <option value="B">2  9:10~10:00</option>
+						 <option value="C">3  10:10~11:00</option>
+						 <option value="D">4  11:10~12:00</option>
+						 <option value="E">5  13:10~14:00</option>
+						 <option value="F">6  14:10~15:00</option>
+						 <option value="G">7  15:10~16:00</option>
+						 <option value="H">8  16:10~17:00</option>
+						 <option value="I">9  17:10~18:00</option>
+						 <option value="J">A  18:30~19:20</option>
+						 <option value="K">B  19:25~20:15</option>
+						 <option value="L">C  20:25~21:15</option>
+						 <option value="M">D  21:20~22:10</option>
+						 </select>
+						</div>
+						<div class="ts-text is-padded">
+							到
+						</div>
+						<div class="ts-select">
+						 <select name="seq2">
+						 <option value="M" selected>=不限=</option>
+						 <option value="A">1  8:10~9:00</option>
+						 <option value="B">2  9:10~10:00</option>
+						 <option value="C">3  10:10~11:00</option>
+						 <option value="D">4  11:10~12:00</option>
+						 <option value="E">5  13:10~14:00</option>
+						 <option value="F">6  14:10~15:00</option>
+						 <option value="G">7  15:10~16:00</option>
+						 <option value="H">8  16:10~17:00</option>
+						 <option value="I">9  17:10~18:00</option>
+						 <option value="J">A  18:30~19:20</option>
+						 <option value="K">B  19:25~20:15</option>
+						 <option value="L">C  20:25~21:15</option>
+						 <option value="M">D  21:20~22:10</option>
+						 </select>
+						</div>
+						<div class="ts-text is-padded">
+							之間 <span class="ts-text is-key" data-toggle="time:is-visible">說明</span>
+						</div>
+					</div>
+				</div>
+				<div class="ts-modal" data-name="time">
+					<div class="content">
+						<div class="ts-content is-padded">
+							<p>如欲搜尋單一特定節次的課程（如星期一第４節的課程），請輸入「星期一」、「第４節」到「第４節」。</p>
+							<p>如欲搜尋包含特定節次的課程（如星期一第４節的課程），請輸入「星期一」、「不限」到「第４節」之間，則會出現所有涵蓋第４節的課程（如2-4及3-4節）。</p>
+						</div>
+						<div class="ts-divider"></div>
+						<div class="ts-content is-tertiary is-horizontally-padded">
+							<button class="ts-button" data-toggle="time:is-visible" type="button">
+								關閉
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ts-wrap is-center-aligned">
+				<button class="ts-button is-start-icon" type="submit" form="chaxun">
+					<span class="ts-icon is-check-icon"></span>
+					送出查詢
+				</button>
+				<button class="ts-button is-start-icon is-secondary" type="reset" form="chaxun">
+					<span class="ts-icon is-trash-icon"></span>
+					重新選擇
+				</button>
+			</div>
+		</div>
+		</form>
+	</div>
+	
+	<div class="ts-space is-small"></div>
+	
+	<div class="ts-content">
+		<div class="ts-text is-secondary is-center-aligned no-print">
+			<a href="https://github.com/robertgelb/ntpu-course-query-rwd/">Github</a> / Style - <a href="https://v4.tocas-ui.com">Tocas UI</a><br />Favicon - <a href="https://v4.tocas-ui.com">Twemoji</a> (Twitter 2020, CC BY 4.0)
+		</div>
+	</div>
+
+</div>
+</div>
+  
+  <script src="config.js"></script>
+</body>
+</html>
