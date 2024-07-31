@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Redirect to the results page
         try {
-            window.location.href = 'search-results.html';
+            window.location.href = 'search-result.html';
             console.log('Redirecting to results page');
         } catch (error) {
             console.error('Error during redirection:', error);
