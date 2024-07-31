@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchForm = document.getElementById('searchForm');
 
     if (!searchForm) {
-        console.error('Search form not found');
+        console.error('沒找到名為「searchForm」之搜尋表單。');
         return;
     }
 
     searchForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        console.log('Form submitted');
+        console.log('已提交表單。');
 
         const keywords = document.getElementById('searchKeywords').value;
         const target = document.getElementById('searchTarget').value;
