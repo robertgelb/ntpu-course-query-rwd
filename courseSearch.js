@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('searchKeywords', keywords);
             localStorage.setItem('searchTarget', target);
             localStorage.setItem('searchXuezhi', xuezhi);
-            console.log('Search parameters stored in localStorage');
+            console.log('Search parameters stored in localStorage: ', { keywords, target, xuezhi });
         } catch (error) {
             console.error('Error storing data in localStorage:', error);
         }
