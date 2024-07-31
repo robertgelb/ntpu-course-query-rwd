@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const target = document.getElementById('searchTarget').value;
 		const xuezhiRadio = document.querySelector('input[name="xuezhi"]:checked').value;
 
-        if (!keywords || !target || !xuezhiRadio) {
+        if (!keywords || !target) {
             console.error('Missing required fields');
             return;
         }
 
-        const xuezhi = xuezhiRadio.value;
+        const xuezhi = xuezhiRadio ? xuezhiRadio.value : '';
 
         console.log('Search parameters:', { keywords, target, xuezhi });
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Redirect to the results page
         try {
-            window.location.href = 'search-result.html';
+            //window.location.href = 'search-result.html';
             console.log('Redirecting to results page');
         } catch (error) {
             console.error('Error during redirection:', error);
