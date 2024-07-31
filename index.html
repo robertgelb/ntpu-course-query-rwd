@@ -9,7 +9,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas/5.0.1/tocas.min.js"></script>
 
 
-  <link rel="shortcut icon" href="https://robertgelb.github.io/ntpusu-regulation-typesetting/favicon.ico" />
+  <link rel="shortcut icon" href="favicon-small.ico" />
+  <link rel="apple-touch-icon" sizes="512x512" href="favicon-large.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-large.png" />
+  
   
  	
 </head>
@@ -30,24 +33,25 @@
 					<div class="header">臺北大學課程查詢</div>
 					<div class="description">響應式的課程查詢系統</div>
 					<div class="action">
+					<form id="SearchForm">
 					
 						<!-- 學制 -->
 						<div class="ts-wrap is-center-aligned">
 							<label class="ts-radio">
 								<input name="xuezhi" type="radio" value="U" checked />
-								學士班
+								U 學士
 							</label>
 							<label class="ts-radio">
 								<input name="xuezhi" type="radio" value="M" />
-								碩博班
+								M 碩博
 							</label>
 							<label class="ts-radio">
 								<input name="xuezhi" type="radio" value="N" />
-								進修
+								N 進修
 							</label>
 							<label class="ts-radio">
 								<input name="xuezhi" type="radio" value="P" />
-								在職碩
+								P 在職
 							</label>
 						</div>
 		
@@ -56,36 +60,39 @@
 						<div class="ts-grid">
 							<div class="column">
 								<div class="ts-select">
-									<select name="whatToQuery" required>
-										<option value="tec" selected>教師</option>
-										<option value="cou">課名</option>
+									<select id="searchTarget" required>
+										<option value="teacher" selected>教師</option>
+										<option value="course">課名</option>
 									</select>
 								</div>
 							</div>
 							<div class="column is-fluid">
 								<div class="ts-input">
-									<input type="text" placeholder="關鍵字…" required />
+									<input type="text" placeholder="關鍵字…" required id="searchKeywords" />
 								</div>
 							</div>
 							<div class="column">
-								<button class="ts-button" type="submit" form="chaxun">查詢</button>
+								<button class="ts-button" type="submit" form="SearchForm">查詢</button>
 							</div>
 						</div>
 						
 						<BR />
-						
+					
+					</form>
+					
 						<a href="more-condition.html">更多條件查詢</a>
 					</div>
 				</div>
 			</div>
 			<div class="ts-content">
 				<div class="ts-text is-secondary is-center-aligned no-print">
-					<a href="https://github.com/robertgelb/ntpu-course-query-rwd/">Github</a> / Style - <a href="https://v4.tocas-ui.com">Tocas UI</a><br />Favicon - <a href="https://v4.tocas-ui.com">Twemoji</a> (Twitter 2020, CC BY 4.0)
+					<a href="https://github.com/robertgelb/ntpu-course-query-rwd/">Github</a> / Style - <a href="https://tocas-ui.com/5.0">Tocas UI</a><br />Favicon - <a href="https://v4.tocas-ui.com">Twemoji</a> (Twitter 2020, CC BY 4.0)
 				</div>
 			</div>
 		</div>
     </div>
   </div>
   <script src="config.js"></script>
+  <script src="courseSearch.js"></script>
 </body>
 </html>
